@@ -1,11 +1,3 @@
-" Install vim plug
-" https://github.com/junegunn/vim-plug
-" Install node
-" Copy this file to ~/.config/nvim/init.vim
-" Install clang
-" Install pip install -U jedi-language-server
-" Now everything should be ready! Just open neovim
-
 let g:coc_global_extensions = ['coc-java', 'coc-pairs', 'coc-clangd', 'coc-jedi']
 
 set relativenumber
