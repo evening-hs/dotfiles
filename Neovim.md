@@ -45,9 +45,21 @@
 
    1. Install java
 
+      **openSUSE**
+
       ```bash
       sudo zypper install java-20-openjdk-devel
       ```
 
 7. Copy the file `init.vim` to `~/.config/nvim/init.vim`.
+
+8. Run Neovim and install the plugs:
+
+   ````bash
+   nvim +PlugInstall
+   ````
+
+   Or else just `nvim` and once inside run `:PlugInstall`.
+
+   
 
