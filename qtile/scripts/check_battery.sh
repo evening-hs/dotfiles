@@ -4,7 +4,7 @@
 ~/.config/qtile/scripts/low_bat_notifier.sh
 
 #low battery level, you can modify it
-low_bat=26
+low_bat=20
 
 #Do not modify these variables
 charging="fully-charged"

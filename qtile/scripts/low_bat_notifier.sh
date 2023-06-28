@@ -3,13 +3,13 @@
 ### VARIABLES
 
 POLL_INTERVAL=90     # seconds at which to check battery level
-LOW_BAT=26          # lesser than this is considered low battery
+LOW_BAT=20          # lesser than this is considered low battery
 
 # If BAT0 doesn't work for you, check available devices with command below
 #
 #   $ ls -1 /sys/class/power_supply/
 #
-BAT_PATH=/sys/class/power_supply/BAT1
+BAT_PATH=/sys/class/power_supply/BAT0
 BAT_STAT=$BAT_PATH/status
 
 if [[ -f $BAT_PATH/charge_full ]]
