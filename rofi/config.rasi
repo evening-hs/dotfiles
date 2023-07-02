@@ -12,8 +12,8 @@ configuration {
     scroll-method:			0;
     disable-history:			false;
     sidebar-mode:			false;
-    combi-modi: "window,drun,run";
-    modes: [window,drun,run,combi];
+    combi-modi: "window,drun,run,emoji";
+    modes: [window,drun,run,emoji,combi];
     terminal: "/usr/bin/xfce4-terminal";
 }
 
