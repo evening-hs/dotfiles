@@ -1,10 +1,6 @@
 from libqtile import layout
 from libqtile.config import Match
 
-# I'm gonna add a list of the layouts that look nice
-# MonadTall
-# Bsp
-
 layouts = [
     layout.MonadTall(margin=8, border_focus='#5294e2',
                      border_normal='#2c5380'),
@@ -12,8 +8,8 @@ layouts = [
     layout.Max(margin=8, border_focus='#5294e2',
                border_normal='#2c5380'),
 
-    Layout.Bsp(margin=8, border_focus='#5294e2',
-               border_normal='#2c5380', fair=True, border_on_single=True),
+    layout.Bsp(margin=6, border_focus='#5294e2',
+              border_normal='#2c5380', fair=True, border_on_single=True),
 ]
 
 floating_layout = layout.Floating(float_rules=[
