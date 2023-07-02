@@ -5,11 +5,8 @@ layouts = [
     layout.Bsp(margin=6, border_focus='#5294e2',
               border_normal='#2c5380', fair=False, border_on_single=True),
 
-    layout.MonadTall(margin=8, border_focus='#5294e2',
-                     border_normal='#2c5380'),
-    
     layout.Max(margin=8, border_focus='#5294e2',
-               border_normal='#2c5380'),
+               border_normal='#2c5380', border_width=2),
 ]
 
 floating_layout = layout.Floating(float_rules=[
