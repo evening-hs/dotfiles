@@ -5,6 +5,9 @@ picom & disown # --experimental-backends --vsync should prevent screen tearing o
 # Low battery notifier
 ~/.config/qtile/scripts/check_battery.sh & disown
 
+# Keyboard layouts
+~/.config/qtile/scripts/keyboard.sh & disown
+
 # Start welcome
 eos-welcome & disown
 
