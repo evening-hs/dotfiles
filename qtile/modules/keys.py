@@ -11,10 +11,6 @@ keys = [
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
 
-    # Move between open windows
-    Key([mod], "space",lazy.layout.next(),
-        desc="Move window focus to other window"),
-
     # Bring windows forward/backwards
     Key([mod], "f",lazy.window.bring_to_front(),desc="Brings a window to the front"),
 
