@@ -51,7 +51,7 @@ screens = [
                        foreground='#2f343f'
                        ), 
                 volume,
-                widget.TextBox(                                                                    
+                widget.TextBox( 
                        text = '',
                        padding = 0,
                        fontsize = 28,
@@ -73,6 +73,10 @@ screens = [
                        fontsize = 28,
                        foreground='#2f343f',
                        ),   
+                widget.Battery(
+                    format = '{percent:0.0%}',
+                    low_percentage = 0.2,
+                    ),
                 widget.TextBox(
                     text='',
                     mouse_callbacks= {

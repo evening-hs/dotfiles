@@ -30,7 +30,7 @@ for i in groups:
 
         # Use mod1 + Page_Down/Page_Up to move between groups
         Key([mod], "Page_Down", lazy.screen.next_group(),
-            desc="Switch to next group"),
+             desc="Switch to next group"),
 
         Key([mod], "Page_Up", lazy.screen.prev_group(),
             desc="Switch to previous group"),
@@ -38,9 +38,9 @@ for i in groups:
         # Use mod1 + shift + Page_Down/Page_Up to move a window between groups
         Key([mod, "shift"], "Page_Down", window_to_next_group(),
             desc="Move window to next group"),
-        
+      
         Key([mod, "shift"], "Page_Up", window_to_prev_group(),
-            desc="Move window to next group"),
+            desc="Move window to previous group"),
 
         # Use mod1 + Home/End to move to first/last group
         Key([mod], "Home", lazy.group["1"].toscreen(),
@@ -48,6 +48,15 @@ for i in groups:
 
         Key([mod], "End", lazy.group["0"].toscreen(),
             desc="Switch to last group"),
+
+        # Use mod1 + shift + Home/End to move windows to first/last group
+        Key([mod, "shift"], "Home",
+            lazy.window.togroup("1", switch_group=True),
+            desc="Switch to & move focused window to first group"),
+        
+        Key([mod, "shift"], "End",
+            lazy.window.togroup("0", switch_group=True),
+            desc="Switch to & move focused window to last group"),
 
         # mod1 + shift + letter of group = switch to & move focused window to group
         Key([mod, "shift"],
