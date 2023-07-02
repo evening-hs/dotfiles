@@ -14,6 +14,7 @@ configuration {
     sidebar-mode:			false;
     combi-modi: "window,drun,run";
     modes: [window,drun,run,combi];
+    terminal: "/usr/bin/xfce4-terminal";
 }
 
 @import "~/.config/rofi/arc_dark_transparent_colors.rasi"
