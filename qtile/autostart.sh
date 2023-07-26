@@ -6,7 +6,11 @@ picom & disown # --experimental-backends --vsync should prevent screen tearing o
 ~/.config/qtile/scripts/check_battery.sh & disown
 
 # Keyboard layouts
-~/.config/qtile/scripts/keyboard.sh & disown
+# Disabled because I'm using ibus now
+# ~/.config/qtile/scripts/keyboard.sh & disown
+
+# Ibus daemon
+~/.config/qtile/scripts/ibus.sh & disown
 
 # Start welcome
 eos-welcome & disown
