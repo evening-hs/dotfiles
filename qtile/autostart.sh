@@ -9,6 +9,12 @@ picom & disown # --experimental-backends --vsync should prevent screen tearing o
 # Disabled because I'm using ibus now
 # ~/.config/qtile/scripts/keyboard.sh & disown
 
+# Network Manager icon
+nm-applet & disown
+
+# Touchegg (For touchpad gestures)
+touchegg --client & disown
+
 # Ibus daemon
 ~/.config/qtile/scripts/ibus.sh & disown
 
