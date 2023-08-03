@@ -73,17 +73,10 @@ screens = [
                        fontsize = 28,
                        foreground='#2f343f',
                        ),
-                widget.Pomodoro(
-                        #background='#848e96',
-                        color_active='#9bd689',
-                        color_break='#e39378',
-                        length_long_break=5,
-                        length_short_break=2,
-                        length_pomodori=15
-                        ),
+                pomodoro,
                 widget.Battery(
-                    format = '{percent:0.0%}',
-                    low_percentage = 0.2,
+                        format = '{percent:0.0%}',
+                        low_percentage = 0.2,
                     ),
                 widget.TextBox(
                     text='',
