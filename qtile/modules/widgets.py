@@ -1,8 +1,7 @@
 from libqtile import widget
 from libqtile import qtile
 from datetime import datetime, timedelta
-import tkinter as tk
-import time
+import os
 
 colors = [
 	      ["#282c34", "#282c34"], # panel background
@@ -59,46 +58,6 @@ volume = MyVolume(
     mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn("pavucontrol")}
 )
 
-def show_alert(duration):
-    root = tk.Tk()
-
-    root.wait_visibility(root)
-
-    root.wm_attributes("-fullscreen", True),
-    root.wm_attributes("-topmost", True)
-    root.wm_attributes("-alpha", 0.85)
-
-    root.configure(background='black')
-
-    timer = time.time() + duration
-
-    def on_clic(_):
-        root.destroy()
-
-    root.bind('<Button-1>', on_clic)
-
-    def update_timer():
-        if time.time() < timer:
-            remaining_time = int(timer - time.time())
-            text = f"{remaining_time//60}:{remaining_time%60:02}"
-            label.config(text=text)
-            
-            root.after(1000, update_timer)
-        else:
-            root.destroy()
-
-    label = tk.Label(
-            root,
-            text="",
-            font=('Cascadia Code', 75),
-            fg="white",
-            bg="black")
-
-    label.place(relx=0.5, rely=0.5, anchor='center')
-
-    update_timer()
-    root.mainloop()
-
 class MyPomodoro(widget.Pomodoro):
     def _update(self):
         if self.status in [self.STATUS_INACTIVE, self.STATUS_PAUSED]:
@@ -107,16 +66,17 @@ class MyPomodoro(widget.Pomodoro):
         if self.end_time > datetime.now() and self.status != self.STATUS_START:
             return
 
-        if self.status == self.STATUS_ACTIVE and self.pomodoros == self.num_pomodori:
-            self.status = self.STATUS_LONG_BREAK
-            self.end_time = datetime.now() + timedelta(minutes=self.length_long_break)
-            self.pomodoros = 1
+            if self.status == self.STATUS_ACTIVE and self.pomodoros == self.num_pomodori:
+                self.status = self.STATUS_LONG_BREAK
+                self.end_time = datetime.now() + timedelta(minutes=self.length_long_break)
+                self.pomodoros = 1
             if self.notification_on:
                 self._send_notification(
                     "normal",
-                    "Long break! End Time: " + self.end_time.strftime("%H:%M"),
+                    "Long break!",
                 )
-                show_alert(self.length_long_break*60)
+                # For some reason this doesn't work using lazy.spawn() or any other fancy qtile function
+                os.system(f"python ~/.config/qtile/scripts/pomodoro_alert.py {self.length_long_break*60}")
             return
 
         if self.status == self.STATUS_ACTIVE:
@@ -126,9 +86,9 @@ class MyPomodoro(widget.Pomodoro):
             if self.notification_on:
                 self._send_notification(
                     "normal",
-                    "Short break! End Time: " + self.end_time.strftime("%H:%M"),
+                    "Short break!",
                 )
-                show_alert(self.length_short_break*60)
+                os.system(f"python ~/.config/qtile/scripts/pomodoro_alert.py {self.length_short_break*60}")
             return
 
         self.status = self.STATUS_ACTIVE
@@ -136,8 +96,7 @@ class MyPomodoro(widget.Pomodoro):
         if self.notification_on:
             self._send_notification(
                 "critical",
-                "Please start with the next Pomodori! End Time: "
-                + self.end_time.strftime("%H:%M"),
+                "Please start with the next Pomodori",
             )
 
         return
@@ -145,7 +104,7 @@ class MyPomodoro(widget.Pomodoro):
 pomodoro = MyPomodoro(
     color_active='#9bd689',
     color_break='#e39378',
-    length_long_break=2,
-    length_short_break=1,
-    length_pomodori=3
+    length_long_break=5,
+    length_short_break=2,
+    length_pomodori=15
 )
