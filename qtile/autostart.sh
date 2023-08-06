@@ -18,6 +18,9 @@ touchegg --client & disown
 # Ibus daemon
 ~/.config/qtile/scripts/ibus.sh & disown
 
+# Screen locker
+light-locker & disown
+
 # Start welcome
 eos-welcome & disown
 

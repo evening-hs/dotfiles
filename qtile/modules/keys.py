@@ -19,7 +19,7 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal),
         desc="Launch terminal"),
     # Launch rofi
-    Key([mod], "tab", lazy.spawn("rofi -show combi"),
+    Key([mod], "Tab", lazy.spawn("rofi -show combi"),
         desc="spawn rofi"),
     Key([mod, "shift"], "r", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
@@ -79,4 +79,7 @@ keys = [
     # Launch screenshot utility
     Key([], "Print",lazy.spawn("gnome-screenshot")),
     Key([mod], "Print",lazy.spawn("gnome-screenshot -i")),
+
+    # Lock screen
+    Key([mod], "Escape", lazy.spawn("light-locker-command -l")),
 ]
