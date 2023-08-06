@@ -2,11 +2,14 @@ from libqtile import layout
 from libqtile.config import Match
 
 layouts = [
-    layout.Bsp(margin=6, border_focus='#5294e2',
-              border_normal='#2c5380', fair=False, border_on_single=True),
+    layout.Bsp(margin=6, border_focus='#5294e2', border_normal='#2c5380',
+               fair=False, border_on_single=True, margin_on_single=[30, 60, 30, 60]),
 
     layout.Max(margin=8, border_focus='#5294e2',
                border_normal='#2c5380', border_width=2),
+
+    layout.Floating(border_normal='#2c5380', border_focus='#5294e2',
+                    border_width=2, full_screen_border_width=2, max_border_width=2),
 ]
 
 floating_layout = layout.Floating(float_rules=[
