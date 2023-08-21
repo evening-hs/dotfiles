@@ -14,7 +14,7 @@ configuration {
     sidebar-mode:			false;
     combi-modi: "window,drun,run,emoji";
     modes: [window,drun,run,emoji,combi];
-    terminal: "/usr/bin/xfce4-terminal";
+    terminal: "/usr/bin/kitty";
 }
 
 @import "~/.config/rofi/arc_dark_transparent_colors.rasi"

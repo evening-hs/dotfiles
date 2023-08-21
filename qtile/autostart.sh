@@ -1,5 +1,5 @@
 #!/bin/sh
-feh --bg-scale ~/.local/share/backgrounds/minecraft.png
+feh --bg-scale ~/.local/share/backgrounds/"Pink Floyd Catppuccin.png"
 picom & disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed
 
 # Low battery notifier
