@@ -5,6 +5,8 @@ import sys
 def main(duration):
     # Create a fullscreen black window
     root = tk.Tk()
+    
+    root.title("Pomodoro")
 
     root.wait_visibility(root)
 

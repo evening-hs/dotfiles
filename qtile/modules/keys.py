@@ -3,6 +3,7 @@ from libqtile.config import Key
 
 mod = "mod4"
 terminal = "xfce4-terminal"
+file_manager = "thunar"
 
 keys = [
     # Switch between windows
@@ -13,6 +14,8 @@ keys = [
 
     # Bring windows forward/backwards
     Key([mod], "f",lazy.window.bring_to_front(),desc="Brings a window to the front"),
+
+    Key([mod], "e", lazy.spawn(file_manager), desc="Spawn the file manager"),
 
     # Launchers
     # Launch terminal
