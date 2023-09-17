@@ -3,7 +3,7 @@ from libqtile.config import Key
 
 mod = "mod4"
 terminal = "kitty"
-file_manager = "thunar"
+file_manager = "nemo"
 
 keys = [
     # Switch between windows
@@ -76,8 +76,8 @@ keys = [
     Key([], "XF86AudioMute",lazy.spawn("amixer set Master toggle")),
 
     # Manage Brightness
-    Key([], "XF86MonBrightnessUp",lazy.spawn("brightnessctl s 5%+")),
-    Key([], "XF86MonBrightnessDown",lazy.spawn("brightnessctl s 5%-")),
+    Key([], "XF86MonBrightnessUp",lazy.spawn("brightnessctl s 2%+")),
+    Key([], "XF86MonBrightnessDown",lazy.spawn("brightnessctl s 2%-")),
 
     # Launch screenshot utility
     Key([], "Print",lazy.spawn("gnome-screenshot")),

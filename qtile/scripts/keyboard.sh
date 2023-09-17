@@ -1,4 +1,12 @@
-#!/bin/bash
+# !/usr/bin
+# 
+# Requires the `ibus` package.
+# For more information visit:
+# https://wiki.archlinux.org/title/IBus
 
-setxkbmap -layout us,latam -option grp:win_space_toggle
+# Set the compose key as Left Alt
+setxkbmap -option "compose:ralt"
+
+# Start the ibux daemon
+ibus-daemon -rxR
 

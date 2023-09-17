@@ -1,22 +1,23 @@
 #!/bin/sh
-feh --bg-scale ~/.local/share/backgrounds/"Pink Floyd Catppuccin.png"
-picom & disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed
+feh --bg-fill ~/.local/share/backgrounds/planet.jpg
+
+# Avoid launching picom on wayland as it hangs the system
+if [ "$XDG_SESSION_TYPE" = "x11" ]
+then
+  picom & disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed
+fi
 
 # Low battery notifier
 ~/.config/qtile/scripts/check_battery.sh & disown
 
 # Keyboard layouts
-# Disabled because I'm using ibus now
-# ~/.config/qtile/scripts/keyboard.sh & disown
+~/.config/qtile/scripts/keyboard.sh & disown
 
 # Network Manager icon
 nm-applet & disown
 
 # Touchegg (For touchpad gestures)
 touchegg --client & disown
-
-# Ibus daemon
-~/.config/qtile/scripts/ibus.sh & disown
 
 # Screen locker
 light-locker & disown
