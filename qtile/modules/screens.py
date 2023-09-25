@@ -4,12 +4,18 @@ from libqtile.config import Screen
 from modules.keys import terminal
 import os
 
-screens = [
-    Screen(
-        top=bar.Bar(
-            [   widget.Sep(padding=3, linewidth=0, background="#2f343f"),
-                widget.Image(filename='~/.config/qtile/eos-c.png', margin=3, background="#2f343f", mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("rofi -show combi")}),
+default_bar = bar.Bar(
+            [   
+                widget.Sep(padding=3, linewidth=0, background="#2f343f"),
+                
+                widget.Image(
+                    filename='~/.config/qtile/eos-c.png',
+                    margin=3,
+                    background="#2f343f",
+                    mouse_callbacks={'Button1': lambda: qtile.cmd_spawn("rofi -show combi")}),
+
                 widget.Sep(padding=4, linewidth=0, background="#2f343f"), 
+
                 widget.GroupBox(
                                 highlight_method='line',
                                 this_screen_border="#5294e2",
@@ -17,6 +23,7 @@ screens = [
                                 active="#ffffff",
                                 inactive="#848e96",
                                 background="#2f343f"),
+
                 widget.TextBox(
                        text = '',
                        padding = 0,
@@ -89,6 +96,12 @@ screens = [
                 
             ],
             30,  # height in px
-            background="#404552"  # background color
-        ), ),
+            background="#404552",
+            opacity=0.75,
+            margin=6,
+        )
+
+screens = [
+    Screen(bottom=default_bar,wallpaper="~/.local/share/backgrounds/EndeavourOS-Gradient.png",wallpaper_mode="fill"),
+    Screen(top=default_bar,wallpaper="~/.local/share/backgrounds/EndeavourOS-Gradient.png",wallpaper_mode="fill"),
 ]

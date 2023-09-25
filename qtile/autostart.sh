@@ -4,7 +4,7 @@
 if [ "$XDG_SESSION_TYPE" = "x11" ]
 then
   picom & disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed
-  ~/.fehbg & disown
+  # ~/.fehbg & disown
 
   # Touchegg (For touchpad gestures)
   touchegg --client & disown
