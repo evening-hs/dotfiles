@@ -5,7 +5,7 @@
 # https://wiki.archlinux.org/title/IBus
 
 # Set the compose key as Left Alt
-setxkbmap -option "compose:ralt"
+setxkbmap -option "compose:rctrl"
 
 # Start the ibux daemon
 ibus-daemon -rxR

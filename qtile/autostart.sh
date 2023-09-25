@@ -1,10 +1,13 @@
 #!/bin/sh
-feh --bg-fill ~/.local/share/backgrounds/planet.jpg
 
 # Avoid launching picom on wayland as it hangs the system
 if [ "$XDG_SESSION_TYPE" = "x11" ]
 then
   picom & disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed
+  feh --bg-fill ~/.local/share/backgrounds/planet.jpg
+
+  # Touchegg (For touchpad gestures)
+  touchegg --client & disown
 fi
 
 # Low battery notifier
@@ -15,9 +18,6 @@ fi
 
 # Network Manager icon
 nm-applet & disown
-
-# Touchegg (For touchpad gestures)
-touchegg --client & disown
 
 # Screen locker
 light-locker & disown

@@ -19,3 +19,16 @@ widget_defaults = dict(
         fontsize=13,
         padding=3
 )
+
+@hook.subscribe.client_new
+def bring_to_front(client):
+    if client.name == 'Screenshot':
+        client.focus()
+        client.enable_floating()
+        client.bring_to_front()
+        client.keep_above(True)
+        client.move_to_top()
+        client.move_up(True)
+        
+
+
