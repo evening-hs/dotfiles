@@ -8,7 +8,7 @@ def window_to_prev_group(qtile):
     new_group = current_group - 1 if current_group != 0 else 9
     if qtile.current_window is not None:
         qtile.current_window.togroup(qtile.groups[new_group].name)
-        qtile.current_screen.toggle_group(qtile.groups[new_group])
+        qtile.current_screen.toggle_group(qtile.groups[new_group].name)
 
 @lazy.function
 def window_to_next_group(qtile):
@@ -16,7 +16,7 @@ def window_to_next_group(qtile):
     new_group = current_group + 1 if current_group != 9 else 0
     if qtile.current_window is not None:
         qtile.current_window.togroup(qtile.groups[new_group].name)
-        qtile.current_screen.toggle_group(qtile.groups[new_group])
+        qtile.current_screen.toggle_group(qtile.groups[new_group].name)
 
 groups = [Group(i) for i in "1234567890"]
 

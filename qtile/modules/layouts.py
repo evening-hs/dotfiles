@@ -22,5 +22,6 @@ floating_layout = layout.Floating(float_rules=[
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
     Match(title='Screenshot'),
-    Match(title='Pomodoro')
+    Match(title='Pomodoro'),
+    Match(title='Qalculate!'),
 ])

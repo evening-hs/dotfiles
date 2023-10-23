@@ -31,4 +31,3 @@ def bring_to_front(client):
         client.move_up(True)
         
 
-

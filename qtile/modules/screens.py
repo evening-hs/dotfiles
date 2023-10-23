@@ -102,6 +102,6 @@ default_bar = bar.Bar(
         )
 
 screens = [
-    Screen(bottom=default_bar,wallpaper="~/.local/share/backgrounds/EndeavourOS-Gradient.png",wallpaper_mode="fill"),
-    Screen(top=default_bar,wallpaper="~/.local/share/backgrounds/EndeavourOS-Gradient.png",wallpaper_mode="fill"),
+    Screen(bottom=default_bar,wallpaper="~/.local/share/backgrounds/lighthouse.jpg",wallpaper_mode="fill"),
+    Screen(top=default_bar,wallpaper="~/.local/share/backgrounds/lighthouse.jpg",wallpaper_mode="fill"),
 ]
