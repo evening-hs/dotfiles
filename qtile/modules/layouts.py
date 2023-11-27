@@ -1,15 +1,36 @@
 from libqtile import layout
 from libqtile.config import Match
+import colors as saga
+
+active_border_color = saga.border_active
+inactive_border_color = saga.border_inactive
+border_width = 4
 
 layouts = [
-    layout.Bsp(margin=6, border_focus='#5294e2', border_normal='#2c5380',
-               fair=False, border_on_single=True, margin_on_single=[30, 60, 30, 60]),
+    layout.Bsp(
+        margin=6,
+        border_focus=active_border_color,
+        border_normal=inactive_border_color,
+        fair=False,
+        border_on_single=True,
+        margin_on_single=[30, 60, 30, 60],
+        border_width = border_width
+    ),
 
-    layout.Max(margin=8, border_focus='#5294e2',
-               border_normal='#2c5380', border_width=2),
+    layout.Max(
+        margin=8,
+        border_focus=active_border_color,
+        border_normal=inactive_border_color,
+        border_width=border_width
+    ),
 
-    layout.Floating(border_normal='#2c5380', border_focus='#5294e2',
-                    border_width=2, full_screen_border_width=2, max_border_width=2),
+    layout.Floating(
+        border_normal=active_border_color,
+        border_focus=inactive_border_color,
+        border_width=border_width,
+        full_screen_border_width=border_width,
+        max_border_width=border_width
+    ),
 ]
 
 floating_layout = layout.Floating(float_rules=[
