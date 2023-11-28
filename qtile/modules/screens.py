@@ -13,9 +13,9 @@ default_bar = bar.Bar(
                 dissable_drag               = True,
                 highlight_method            = 'block',
                 inactive                    = saga.background_secondary,
-                this_current_screen_border  = saga.background,
+                this_current_screen_border  = saga.mauve,
                 rounded                     = False,
-                block_highlight_text_color  = saga.foreground,
+                block_highlight_text_color  = saga.background,
                 ),
 
             widget.Spacer(),
@@ -70,5 +70,5 @@ default_bar = bar.Bar(
     )
 
 screens = [
-    Screen(bottom=default_bar,wallpaper="",wallpaper_mode="fill"),
+    Screen(bottom=default_bar,wallpaper="~/.local/share/backgrounds/Pink Floyd Catppuccin.png",wallpaper_mode="fill"),
 ]
