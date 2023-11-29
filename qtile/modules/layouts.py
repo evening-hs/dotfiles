@@ -28,7 +28,7 @@ layouts = [
         border_normal           = inactive_border_color,
         border_focus            = active_border_color,
         border_width            = border_width,
-        fullscreen_border_width = border_width,
+        fullscreen_border_width = 0,
         max_border_width        = border_width
     ),
 ]
@@ -37,7 +37,7 @@ floating_layout = layout.Floating(
         border_normal           = inactive_border_color,
         border_focus            = active_border_color,
         border_width            = border_width,
-        fullscreen_border_width = border_width,
+        fullscreen_border_width = 0,
         max_border_width        = border_width,
         float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.

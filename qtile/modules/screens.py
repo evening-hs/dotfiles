@@ -8,14 +8,21 @@ import colors as saga
 default_bar = bar.Bar(
         [
             widget.GroupBox(
+                # font
                 active                      = saga.background,
+                inactive                    = saga.background_secondary,
+
+                # background
                 background                  = saga.celeste,
+                this_current_screen_border  = saga.mauve,
+                other_current_screen_border = saga.pale_lavender,
+                other_screen_border         = saga.pale_lavender,
+                block_highlight_text_color  = saga.background,
+
+                # config
                 dissable_drag               = True,
                 highlight_method            = 'block',
-                inactive                    = saga.background_secondary,
-                this_current_screen_border  = saga.mauve,
                 rounded                     = False,
-                block_highlight_text_color  = saga.background,
                 ),
 
             widget.Spacer(),
@@ -71,4 +78,5 @@ default_bar = bar.Bar(
 
 screens = [
     Screen(bottom=default_bar,wallpaper="~/.local/share/backgrounds/Pink Floyd Catppuccin.png",wallpaper_mode="fill"),
+    Screen(wallpaper="~/.local/share/backgrounds/Pink Floyd Catppuccin.png", wallpaper_mode="fill")
 ]
