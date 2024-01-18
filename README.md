@@ -17,4 +17,5 @@
 | **Touchpad**\^   | `30-touchpad.conf` | `/etc/X11/xorg.conf.d/30-touchpad.conf` |
 | **XCompose**     | `.XCompose`        | `~/.XCompose`                           |
 | **Touchegg**\*\^ | `touchegg.conf`    | `~/.config/touchegg/touchegg.conf`      |
+| **QTile**        | `qtile/`           | `~/.config/qtile`                       |
 

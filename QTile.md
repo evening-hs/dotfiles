@@ -2,15 +2,15 @@
 
 **Current version**
 
-![](/home/huerta/dotfiles/images/qtile.png)
+![](images/qtile.png)
 
-![](/home/huerta/dotfiles/images/qtile-2.png)
+![](images/qtile-2.png)
 
 **Previous version**
 
 [commit a3346a6670981e7abc4830e0efd1a77b97681d77](https://github.com/Gspr-bit/dotfiles/tree/a3346a6670981e7abc4830e0efd1a77b97681d77)
 
-![](/home/huerta/dotfiles/images/qtile-translucent.png)
+![](images/qtile-translucent.png)
 
 ## Dependencies
 
