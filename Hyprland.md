@@ -2,7 +2,7 @@
 
 ## TODO
 
-- [ ] Add support for spanish keyboard (make sure that I can write "ª")
+- [x] Add support for spanish keyboard (make sure that I can write "ª")
 
 - [ ] Add a bar (possibly waybar with the following widgets)
 
@@ -20,15 +20,19 @@
 
 ## Dependencies
 
+[FiraCode Nerd Font](https://www.programmingfonts.org/#firacode).
+
 ```bash
-waybar 
+waybar hyprpaper
 ```
 
 **Fedora** (hyprpaper)
 
+First install hyprlang
+
 https://github.com/hyprwm/hyprpaper
 
 ```bash
-sudo dnf install wayland-devel wayland-protocols-devel pango-devel cairo-devel file-devel libglvnd-devel libglvnd-core-devel libjpeg-turbo-devel libwebp-devel gcc-c++
+
 ```
 
