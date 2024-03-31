@@ -69,18 +69,30 @@ window#waybar.hidden {
 
 }
 
-#workspaces button.visible:active,
-#workspaces button.visible:active,
-#workspaces button:hover,
 #workspaces button:hover {
-    box-shadow: none;
+    box-shadow: inset 16px 16px 16px 16px rgba(46, 39, 51, 0.5);
+    
     text-shadow: none;
 
-    background: @foreground;
+    background: @cyan;
     color: @background;
 
     border-width: 0px;
     border-color: transparent;
+}
+
+#workspaces button.visible:hover {
+    background: @pink;
+}
+
+#workspaces button.urgent:hover {
+    background: @red;
+}
+
+#workspaces button.empty:hover {
+    box-shadow: inset 16px 16px 16px 16px rgba(242, 248, 247, 0.5);
+    background: @background-lighter;
+    color: @foreground;
 }
 
 #mode {}
