@@ -23,9 +23,14 @@ window#waybar.hidden {
     padding: 5px;
 }
 
+.modules-right {
+    padding: 5px;
+}
+
 #workspaces {
     background-color: @background;
     border-radius: 19px;
+    margin: 5px;
 }
 
 #workspaces button {
@@ -47,7 +52,8 @@ window#waybar.hidden {
 }
 
 #workspaces button.empty {
-    background: @background-lighter;
+    /*FIXME, this color is not visible*/
+    background: @foreground-darker;
     color: @foreground;
 }
 
@@ -70,10 +76,11 @@ window#waybar.hidden {
 }
 
 #workspaces button:hover {
-    box-shadow: inset 16px 16px 16px 16px rgba(46, 39, 51, 0.5);
+    box-shadow: inset 16px 16px 16px 16px rgba(46, 39, 51, 0.2);
     
     text-shadow: none;
 
+    /*It is necessary to set the color here, because the default is white*/
     background: @cyan;
     color: @background;
 
@@ -90,14 +97,21 @@ window#waybar.hidden {
 }
 
 #workspaces button.empty:hover {
-    box-shadow: inset 16px 16px 16px 16px rgba(242, 248, 247, 0.5);
+    box-shadow: inset 16px 16px 16px 16px rgba(242, 248, 247, 0.2);
     background: @background-lighter;
+    color: @foreground;
+}
+
+#clock {
+    background-color: @background;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 0px 10px 0px 10px;
     color: @foreground;
 }
 
 #mode {}
 
-#clock,
 #battery,
 #cpu,
 #memory,
@@ -118,13 +132,6 @@ window#waybar.hidden {
 }
 
 #window,
-#workspaces {
-    margin: 0 5px;
-}
-
-#clock {
-    background-color: @pink;
-}
 
 #battery {
     background-color: @cyan;

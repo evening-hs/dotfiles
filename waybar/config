@@ -51,7 +51,7 @@
     "clock": {
         // "timezone": "America/Mexico_City",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%d %b %H:%M}",
+        "format": "{:<b> %H:%M</b>\n%d %b}",
     },
 
     "backlight": {
