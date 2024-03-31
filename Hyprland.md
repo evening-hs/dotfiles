@@ -2,8 +2,9 @@
 
 ## TODO
 
-- [x] Add support for spanish keyboard (make sure that I can write "ª")
+:rotating_light: for urgent.
 
+- [x] Add support for spanish keyboard (make sure that I can write "ª")
 - [ ] Add a bar (possibly waybar with the following widgets)
 
   - [ ] Workspace.
@@ -13,10 +14,26 @@
   - [ ] Battery.
   - [ ] Volume
   - [ ] Audio.
+- [x] Use colorscheme similar to Tokyo Night but replace blue with red/pink.
+- [ ] Add keybindings (same as qTile)
+  - [ ] Switch/Move to next/prev workspace
+  - [ ] Switch/Move to first/last workspace
+  - [ ] Move window position
+  - [ ] Change window size
+  - [ ] Media control keybindings
 
-- [ ] Use colorscheme similar to Tokyo Night but replace blue with red/pink.
+- [ ] Screenshot
 
-  
+- [ ] Add touchpad gestures
+  - [x] Swipe to change workspace
+
+  - [ ] Swipe for volume and sound control
+
+  - [ ] Swipe for wofi
+
+- [ ] :rotating_light: Configure wofi
+
+- [ ] :rotating_light: Lock screen
 
 ## Dependencies
 
@@ -32,7 +49,5 @@ First install hyprlang
 
 https://github.com/hyprwm/hyprpaper
 
-```bash
-
-```
+See [Hyprpaper.md](./Hyprpaper.md)
 
