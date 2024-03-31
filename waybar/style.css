@@ -31,6 +31,7 @@ window#waybar.hidden {
 #workspaces button {
     background-color: @cyan;
     border-radius: 16px;
+    border-width: 0px;
     margin: 3px 0px 3px 3px;
     padding-left: 8px;
     padding-right: 8px;
@@ -42,10 +43,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active {
-    background: @cyan;
-    color: @foreground;
-    animation: gradient_f 20s ease-in infinite;
-    transition: all 0.1s cubic-bezier(.55,-0.68,.48,1.682);
+    
 }
 
 #workspaces button.empty {
@@ -71,15 +69,18 @@ window#waybar.hidden {
 
 }
 
-#workspaces button.visible:hover,
+#workspaces button.visible:active,
+#workspaces button.visible:active,
+#workspaces button:hover,
 #workspaces button:hover {
     box-shadow: none;
     text-shadow: none;
-    border: 0px;
-    border-radius: 16px;
-    margin: 3px 0px 3px 3px;
-    padding-left: 8px;
-    padding-right: 8px;
+
+    background: @foreground;
+    color: @background;
+
+    border-width: 0px;
+    border-color: transparent;
 }
 
 #mode {}
