@@ -5,6 +5,13 @@
     font-size: 1em;
 }
 
+@keyframes blink {
+    to {
+        background-color: @background;
+        color: @foreground;
+    }
+}
+
 window#waybar {
     transition-property: background-color;
     transition-duration: 0.5s;
@@ -53,7 +60,7 @@ window#waybar.hidden {
 
 #workspaces button.empty {
     /*FIXME, this color is not visible*/
-    background: @foreground-darker;
+    background: @background-lighter;
     color: @foreground;
 }
 
@@ -102,40 +109,20 @@ window#waybar.hidden {
     color: @foreground;
 }
 
-#clock {
-    background-color: @background;
+#battery,
+#clock,
+#network,
+#backlight,
+#language {
     border-radius: 5px;
-    margin: 5px;
+    margin: 5px 5px 5px 0px;
     padding: 0px 10px 0px 10px;
     color: @foreground;
+    background-color: @background;
 }
 
-#mode {}
-
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#mpd {
-    padding: 0 10px;
-    color: @foreground;
-}
-
-#window,
-
-#battery {
-    background-color: @cyan;
-    color: @background;
+#network.disconnected {
+    background-color: @red;
 }
 
 #battery.charging, #battery.plugged {
@@ -143,15 +130,8 @@ window#waybar.hidden {
     background-color: @cyan;
 }
 
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
 #battery.critical:not(.charging) {
-    background-color: @pink;
+    background-color: @red;
     color: @foreground;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -159,57 +139,3 @@ window#waybar.hidden {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
-#backlight {
-    background-color: @cyan;
-}
-
-#network {
-    background-color: @cyan;
-}
-
-#network.disconnected {
-    background-color: @pink;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#tray {
-    background-color: @background;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: @background;
-}
-
-#idle_inhibitor {
-    background-color: @background;
-}
-
-#idle_inhibitor.activated {
-    background-color: @pink;
-    color: @foreground;
-}
-
-
-#language {
-    background: @background;
-    color: @foreground;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-

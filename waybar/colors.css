@@ -4,9 +4,9 @@
 @define-color red                 #f26650;
 @define-color green               #50f271;
 @define-color background          #2e2733;
-@define-color background_light    #35303a;
-@define-color background_lightest #aba3b3;
+@define-color background-lighter  #35303a;
+@define-color background-lightest #aba3b3;
 @define-color foreground          #f2f8f7;
-@define-color foreground_darker   #e8d3ea;
-@define-color foreground_darkest  #d5bbd8;
+@define-color foreground-darker   #e8d3ea;
+@define-color foreground-darkest  #d5bbd8;
 @define-color accent              #0de2c9;

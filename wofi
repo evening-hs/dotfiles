@@ -1,0 +1,42 @@
+@import url(".config/waybar/colors.css");
+
+#window {
+    margin: 5px;
+    border: 2px solid @red;
+    background-color: @background;
+    border-radius: 10px;
+}
+
+#input {
+    background-color: @background-lighter;
+    margin: 5px;
+    border: 2px solid @blue;
+    color: @foreground;
+    font-family: "FiraCode Nerd Font Mono"
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#outer-box {
+    margin: 5px;
+}
+
+#scroll {
+
+}
+
+#text {
+}
+
+#entry {
+    color: @foreground-darker;
+    font-family: "FiraCode Nerd Font Mono"
+}
+
+#entry:selected {
+    background-color: @background-lighter;
+    border: none;
+}
+

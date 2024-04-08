@@ -31,6 +31,13 @@
         },
     },
 
+    "hyprland/language": {
+        "format": "{shortDescription}",
+        "tooltip-format": "{long}",
+        // TODO change language
+        // "onclick":
+    },
+
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -55,9 +62,8 @@
     },
 
     "backlight": {
-        // "device": "acpi_video1",
-        "format": "{icon} ",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{icon}{percent}%",
+        "format-icons": ["󰛩 ", "󱩎 ", "󱩏 ", "󱩐 ", "󱩑 ", "󱩒 ", "󱩓 ", "󱩔 ", "󱩕 ", "󱩖 ", "󰛨 "]
     },
 
     "battery": {
@@ -67,17 +73,18 @@
             "critical": 15
         },
         "format": "{icon} ",
-        "format-alt": "{capacity}% {time}%",
+        "format-alt": "{capacity}% {time}",
         "format-icons": ["", "", "", "", ""]
     },
 
     "network": {
-        "format-wifi": "{signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀 ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname}",
+        "format-disconnected": "󰤮 ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
     },
 
     "custom/media": {
