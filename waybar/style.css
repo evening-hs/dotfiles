@@ -26,11 +26,9 @@ window#waybar.hidden {
     background: none;
 }
 
+.modules-right,
+.modules-left,
 .modules-center {
-    padding: 5px;
-}
-
-.modules-right {
     padding: 5px;
 }
 
@@ -109,6 +107,7 @@ window#waybar.hidden {
     color: @foreground;
 }
 
+#custom-media,
 #battery,
 #clock,
 #network,
@@ -126,8 +125,8 @@ window#waybar.hidden {
 }
 
 #battery.charging, #battery.plugged {
-    color: @foreground;
-    background-color: @cyan;
+    color: @background;
+    background-color: @green;
 }
 
 #battery.critical:not(.charging) {
