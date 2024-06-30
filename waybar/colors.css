@@ -1,12 +1,12 @@
-@define-color blue                #26adff;
-@define-color cyan                #0de2c9;
-@define-color pink                #ec57fd;
-@define-color red                 #f26650;
-@define-color green               #50f271;
-@define-color background          #2e2733;
-@define-color background-lighter  #35303a;
-@define-color background-lightest #aba3b3;
-@define-color foreground          #f2f8f7;
-@define-color foreground-darker   #e8d3ea;
-@define-color foreground-darkest  #d5bbd8;
-@define-color accent              #0de2c9;
+@define-color blue                rgba(38, 173, 255, 1); /* #26adff; */
+@define-color cyan                rgba(13, 226, 201, 1); /* #0de2c9; */
+@define-color pink                rgba(236, 87, 253, 1); /* #ec57fd; */
+@define-color red                 rgba(242, 102, 80, 1); /* #f26650; */
+@define-color green               rgba(80, 242, 113, 1); /* #50f271; */
+@define-color background          rgba(46, 39, 51, 1);   /* #2e2733; */
+@define-color background-lighter  rgba(53, 48, 58, 1);   /* #35303a; */
+@define-color background-lightest rgba(171, 163, 179, 1);/* #aba3b3; */
+@define-color foreground          rgba(242, 248, 247, 1);/* #f2f8f7; */
+@define-color foreground-darker   rgba(232, 211, 234, 1);/* #e8d3ea; */
+@define-color foreground-darkest  rgba(213, 187, 216, 1);/* #d5bbd8; */
+@define-color accent              rgba(13, 226, 201, 1); /* #0de2c9; */

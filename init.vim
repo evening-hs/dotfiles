@@ -7,10 +7,11 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set clipboard+=unnamedplus
+set linebreak
 " set cursorline
 
 " use dvorak in insert mode
-set keymap=dvorak
+" set keymap=dvorak
 
 " Put the cursor in the middle
 set scrolloff=9
@@ -26,6 +27,7 @@ nnoremap gk k
 " Use control backspace to delete previus word
 " control w is awful
 inoremap <C-h> <C-w>
+inoremap <C-BS> <C-w>
 inoremap <C-Space> <C-x><C-p>
 inoremap <C-@> <C-Space>
 

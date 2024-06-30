@@ -7,10 +7,15 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set clipboard+=unnamedplus
-set cursorline
+" set cursorline
 
 set splitright
 set splitbelow
+
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
 
 " Use control backspace to delete previus word
 " control w is awful
@@ -22,6 +27,5 @@ inoremap <C-@> <C-Space>
 map gn :bnext<CR>
 map gN :bprevious<CR>
 
-" Use Control \ to add new line after {}
-inoremap <C-\> <CR><CR><Up><Tab>
+" colorscheme elflord
 

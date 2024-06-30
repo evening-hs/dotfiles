@@ -3,7 +3,9 @@
 #window {
     margin: 5px;
     border: 2px solid @red;
-    background-color: @background;
+    /*background-color: @background;*/
+    background-color: rgba(46, 39, 51, 0.85);
+
     border-radius: 10px;
 }
 
