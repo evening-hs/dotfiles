@@ -2,7 +2,7 @@ import time
 import tkinter as tk
 import sys
 
-def main(duration):
+def show_notification(duration):
     # Create a fullscreen black window
     root = tk.Tk()
     
@@ -38,7 +38,7 @@ def main(duration):
     label = tk.Label(
             root,
             text="",
-            font=('Cascadia Code', 75),
+            font=('Ubuntu', 75),
             fg="white",
             bg="black")
 
@@ -49,4 +49,4 @@ def main(duration):
     
 
 if __name__ == "__main__":
-    main(int(sys.argv[1]))
+    show_notification(int(sys.argv[1]))
