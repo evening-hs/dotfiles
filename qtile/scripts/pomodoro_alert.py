@@ -21,6 +21,7 @@ def show_notification(duration):
 
     def on_clic(_):
         root.destroy()
+        return
 
     root.bind('<Button-1>', on_clic)
 
