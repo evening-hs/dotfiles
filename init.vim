@@ -3,31 +3,39 @@ set number
 set copyindent
 set autoindent
 set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=8
+set softtabstop=8
+set tabstop=8
 set clipboard+=unnamedplus
 set linebreak
 " set cursorline
-
-" use dvorak in insert mode
+set colorcolumn=80 " for good practices
+set showmatch
+set ignorecase
+set smartcase
 " set keymap=dvorak
-
-" Put the cursor in the middle
 set scrolloff=9
 
 set splitright
 set splitbelow
+
+set backspace=indent,eol,start
 
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
+nnoremap H h
+nnoremap J j
+nnoremap K k
+nnoremap L l
+
 " Use control backspace to delete previus word
 " control w is awful
 inoremap <C-h> <C-w>
 inoremap <C-BS> <C-w>
+" inoremap <C-?> <C-w>
 inoremap <C-Space> <C-x><C-p>
 inoremap <C-@> <C-Space>
 
@@ -35,7 +43,7 @@ inoremap <C-@> <C-Space>
 map gn :bnext<CR>
 map gN :bprevious<CR>
 
-" colorscheme elflord
+colorscheme vim
 
 " For use with WSL
 " Remove if using somewhere else.
