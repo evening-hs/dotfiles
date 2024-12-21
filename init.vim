@@ -26,6 +26,10 @@ autocmd FileType text,markdown setlocal textwidth=79
 autocmd FileType text,markdown setlocal spell
 autocmd FileType text,markdown setlocal spelllang=en,es
 
+" key commands
+
+let mapleader = "\<Space>"
+
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
@@ -36,6 +40,12 @@ nnoremap J j
 nnoremap K k
 nnoremap L l
 
+" Use Alt hjkl to move between panels
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
 " Use control backspace to delete previus word
 " control w is awful
 inoremap <C-h> <C-w>
@@ -45,8 +55,16 @@ inoremap <C-Space> <C-x><C-p>
 inoremap <C-@> <C-Space>
 
 " Use gn and gN to move between files
-map gn :bnext<CR>
-map gN :bprevious<CR>
+nnoremap <Leader>n :bnext<CR>
+nnoremap <Leader>N :bprevious<CR>
+
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>w :w<CR>
+
+nnoremap <Leader>t :split \| term<CR>
+nnoremap <Leader>T :vsplit \| term<CR>
+
+tnoremap <Esc> <C-\><C-n>
 
 colorscheme wildcharm
 " colorscheme zellner
