@@ -11,7 +11,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="duellj"
+ZSH_THEME="rkj" # duellj gozilla
+# ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,6 +104,13 @@ export VISUAL='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -e /home/huerta/.nix-profile/etc/profile.d/nix.sh ]; then . /home/huerta/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 bindkey -v
+
+today () {
+        file=$(date -I).md
+        if [ ! -f $file ]; then
+                echo "# "$(date "+%a %b %d")"\n\n" > $file
+        fi
+
+        nvim $file "+10000"
+}
