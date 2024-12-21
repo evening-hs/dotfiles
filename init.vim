@@ -8,7 +8,7 @@ set softtabstop=8
 set tabstop=8
 set clipboard+=unnamedplus
 set linebreak
-" set cursorline
+set cursorline
 set colorcolumn=80 " for good practices
 set showmatch
 set ignorecase
@@ -20,6 +20,9 @@ set splitright
 set splitbelow
 
 set backspace=indent,eol,start
+
+" commands only for specific file types
+autocmd FileType text,markdown setlocal textwidth=80
 
 nnoremap j gj
 nnoremap k gk
@@ -43,7 +46,8 @@ inoremap <C-@> <C-Space>
 map gn :bnext<CR>
 map gN :bprevious<CR>
 
-colorscheme vim
+colorscheme wildcharm
+" colorscheme zellner
 
 " For use with WSL
 " Remove if using somewhere else.
