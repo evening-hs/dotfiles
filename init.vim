@@ -22,7 +22,8 @@ set splitbelow
 set backspace=indent,eol,start
 
 " commands only for specific file types
-autocmd FileType text,markdown setlocal textwidth=80
+autocmd FileType text,markdown setlocal textwidth=79
+autocmd FileType text,markdown setlocal spell
 
 nnoremap j gj
 nnoremap k gk
