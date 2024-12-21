@@ -24,6 +24,7 @@ set backspace=indent,eol,start
 " commands only for specific file types
 autocmd FileType text,markdown setlocal textwidth=79
 autocmd FileType text,markdown setlocal spell
+autocmd FileType text,markdown setlocal spelllang=en,es
 
 nnoremap j gj
 nnoremap k gk
