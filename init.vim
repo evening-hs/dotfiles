@@ -21,10 +21,15 @@ set splitbelow
 
 set backspace=indent,eol,start
 
-" commands only for specific file types
+" settings only for normal text
 autocmd FileType text,markdown setlocal textwidth=79
 autocmd FileType text,markdown setlocal spell
 autocmd FileType text,markdown setlocal spelllang=en,es
+autocmd FileType text,markdown setlocal isfname+=32
+autocmd FileType text,markdown setlocal suffixesadd+=.md
+
+" requires pandoc and texlive to be installed
+cmap print !pandoc "%" -o "%:r".pdf
 
 " key commands
 
@@ -69,17 +74,19 @@ tnoremap <Esc> <C-\><C-n>
 colorscheme wildcharm
 " colorscheme zellner
 
-" For use with WSL
-" Remove if using somewhere else.
-let g:clipboard = {
-            \   'name': 'WslClipboard',
-            \   'copy': {
-            \      '+': 'clip.exe',
-            \      '*': 'clip.exe',
-            \    },
-            \   'paste': {
-            \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-            \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-            \   },
-            \   'cache_enabled': 0,
-            \ }
+if exists('$WSL_DISTRO_NAME')
+        " For use with WSL
+        " Remove if using somewhere else.
+        let g:clipboard = {
+                    \   'name': 'WslClipboard',
+                    \   'copy': {
+                    \      '+': 'clip.exe',
+                    \      '*': 'clip.exe',
+                    \    },
+                    \   'paste': {
+                    \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+                    \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+                    \   },
+                    \   'cache_enabled': 0,
+                    \ }
+endif
