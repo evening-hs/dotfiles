@@ -1,0 +1,16 @@
+set copyindent
+set autoindent
+set expandtab
+set showmatch
+set ignorecase
+set smartcase
+
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+nnoremap H h
+nnoremap J j
+nnoremap K k
+nnoremap L l
