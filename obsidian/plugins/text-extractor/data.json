@@ -3,5 +3,6 @@
     "eng",
     "spa"
   ],
-  "rightClickMenu": true
+  "rightClickMenu": true,
+  "useSystemOCR": false
 }
