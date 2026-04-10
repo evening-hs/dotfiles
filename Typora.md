@@ -5,7 +5,10 @@ Install the latest release of
 
 Copy it to Typora's themes directory.
 
-==Install Tex Gyre Mono and Adwaita Mono== or change your preferred fonts.
+==Install Tex Gyre Bonum and Adwaita Mono== or change your preferred fonts.
+
+https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole
+
+
 
 Copy themeable.user.css to Typora's themes directory.
-

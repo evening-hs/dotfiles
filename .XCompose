@@ -30,6 +30,13 @@
 <Multi_key> <v> <3> : "ǚ"
 <Multi_key> <v> <4> : "ǜ"
 
+# Accents
+
+<Multi_key> <a> <'> : "á"
+<Multi_key> <e> <'> : "é"
+<Multi_key> <i> <'> : "í"
+<Multi_key> <o> <'> : "ó"
+<Multi_key> <u> <'> : "ú"
 
 <Multi_key> <F> : "ª"
 <Multi_key> <M> : "º"
