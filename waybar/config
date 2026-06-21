@@ -1,17 +1,25 @@
 {
     "layer": "top",
-    "position": "top",
+    "position": "bottom",
     "height": 48, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width, default is full width
     "spacing": 5, // Gaps between modules
 
 
     // TODO apps/spotify
-    "modules-left": ["custom/media"],
+    "modules-left": ["wlr/taskbar"],
     "modules-center": ["hyprland/workspaces"],
     // TODO merge battery and backlight
-    "modules-right": ["network", "backlight", "hyprland/language", "battery", "tray", "clock"],
+    "modules-right": ["network", "backlight", "hyprland/language", "pulseaudio", "battery", "clock"],
 
+    "wlr/taskbar": {
+        "icon-size": 24,
+	"icon-theme": "Papirus",
+	"all-outputs": false,
+	"on-click": "minimize-raise",
+	"on-click-middle": "close",
+	"on-click-right": "minimize"
+    },
     // Modules configuration
     // FIXME https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
     "hyprland/workspaces": {
@@ -27,13 +35,13 @@
             "2": [],
             "3": [],
             "4": [],
-            "5": [],
-        },
+            "5": []
+        }
     },
 
     "hyprland/language": {
         "format": "{shortDescription}",
-        "tooltip-format": "{long}",
+        "tooltip-format": "{long}"
         // TODO change language
         // "onclick":
     },
@@ -58,7 +66,7 @@
     "clock": {
         // "timezone": "America/Mexico_City",
         // I had this with <b> but since version 10.0 it is broken
-        "format": "{:%H:%M\n%d %b}",
+        "format": "{:%H:%M\n%d %b}"
     },
 
     "backlight": {
@@ -80,16 +88,25 @@
     "network": {
         "format-wifi": "{icon}",
         "format-ethernet": "󰈀 ",
-        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format": "{essid}:{ipaddr}",
         "format-linked": "{ifname}",
         "format-disconnected": "󰤮 ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
+        "format-alt": "{icon}: {essid}",
+        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "]
     },
 
-    "custom/media": {
-        "interval": 1,
-        "exec": "$HOME/.config/waybar/resources/music.sh" // Script in resources folder
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-icons": {
+            //"default": [" ", " ", " "]
+            "default": ["\uf027 ", "\uf028 "]
+        },
+        "format-muted": "\ueee8 ",
+        "scroll-step": 1,
+        "on-click-right": "pavucontrol",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "ignored-sinks": ["Easy Effects Sink"]
     }
 }
 

@@ -32,12 +32,14 @@ window#waybar.hidden {
     padding: 5px;
 }
 
+#taskbar,
 #workspaces {
     background-color: @background;
     border-radius: 19px;
     margin: 5px;
 }
 
+#taskbar button,
 #workspaces button {
     background-color: @cyan;
     border-radius: 16px;
@@ -48,8 +50,16 @@ window#waybar.hidden {
     color: @background;
 }
 
+#taskbar button {
+    background-color: @background-lighter;
+}
+
 #workspaces button:last-child {
     margin: 3px;
+}
+
+#taskbar button.active {
+    background-color: @pink;
 }
 
 #workspaces button.active {
@@ -80,6 +90,7 @@ window#waybar.hidden {
 
 }
 
+#taskbar button:hover,
 #workspaces button:hover {
     box-shadow: inset 16px 16px 16px 16px rgba(46, 39, 51, 0.2);
     
@@ -93,6 +104,7 @@ window#waybar.hidden {
     border-color: transparent;
 }
 
+#taskbar button.active:hover,
 #workspaces button.visible:hover {
     background: @pink;
 }
@@ -101,6 +113,7 @@ window#waybar.hidden {
     background: @red;
 }
 
+#taskbar button:hover,
 #workspaces button.empty:hover {
     box-shadow: inset 16px 16px 16px 16px rgba(242, 248, 247, 0.2);
     background: @background-lighter;
@@ -112,6 +125,8 @@ window#waybar.hidden {
 #clock,
 #network,
 #backlight,
+#tray,
+#pulseaudio,
 #language {
     border-radius: 5px;
     margin: 5px 5px 5px 0px;
