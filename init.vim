@@ -25,8 +25,6 @@ set backspace=indent,eol,start
 autocmd FileType text,markdown setlocal textwidth=79
 autocmd FileType text,markdown setlocal spell
 autocmd FileType text,markdown setlocal spelllang=en,es
-autocmd FileType text,markdown setlocal isfname+=32
-autocmd FileType text,markdown setlocal suffixesadd+=.md
 
 " requires pandoc and texlive to be installed
 cmap print !pandoc "%" -o "%:r".pdf
