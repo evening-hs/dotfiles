@@ -15,6 +15,7 @@ set ignorecase
 set smartcase
 " set keymap=dvorak
 set scrolloff=9
+set modeline
 
 set splitright
 set splitbelow

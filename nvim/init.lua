@@ -14,6 +14,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 -- vim.opt.keymap = "dvorak"
 vim.opt.scrolloff = 9
+vim.opt.modeline = true;
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
